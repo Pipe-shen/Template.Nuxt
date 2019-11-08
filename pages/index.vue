@@ -18,7 +18,12 @@ export default {
     Logo
   },
   data() {
-    return { name: 'index', fetchList: [] }
+    return {
+      name: 'index',
+      title: '首页 - xxxxx 标题',
+      description: '首页 - xxxxxxx 摘要',
+      fetchList: []
+    }
   },
   computed: {
     todos() {
@@ -29,6 +34,14 @@ export default {
   async asyncData({ $axios }) {
     const ip = await $axios.$get('http://icanhazip.com')
     return { project: 'nuxt', ip }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.description }
+      ]
+    }
   },
   // fetch() {}, //	与 asyncData 方法类似，用于在渲染页面之前获取数据填充应用的状态树（store）。不同的是 fetch 方法不会设置组件的数据。详情请参考 关于fetch方法的文档。
   // head() {}, //	配置当前页面的 Meta 标签, 详情参考 页面头部配置API。

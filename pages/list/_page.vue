@@ -25,6 +25,8 @@ export default {
   data() {
     return {
       name: 'list',
+      title: '列表 - xxxxxxx 标题',
+      description: '列表 - xxxxxxx 摘要',
       // params
       keywords: '',
       pageIndex: 0,
@@ -33,6 +35,14 @@ export default {
       // data
       list: []
       // other
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.description }
+      ]
     }
   },
   async asyncData({ $axios, params }) {
