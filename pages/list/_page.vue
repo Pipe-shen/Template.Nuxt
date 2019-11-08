@@ -47,7 +47,7 @@ export default {
   },
   async asyncData({ $axios, params }) {
     const list = await $axios.$get(
-      '/ua/show/page?current=' + (params.page || 1) + '&size=5'
+      '/ua/show/page?current=' + (params.page || 1) + '&size=10'
     )
     return {
       list: list.data.records,

@@ -10,6 +10,9 @@
 <script>
 export default {
   layout: 'detail',
+  key(route) {
+    return route.fullPath
+  },
   data() {
     return {
       name: 'detail',

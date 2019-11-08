@@ -6,3 +6,4 @@ Nuxt.js 允许你扩展默认的布局，或在 layout 目录下创建自定义�
 
 0. default: 默认布局
 1. 自定义布局：list，detail，single，...
+2. 主题功能

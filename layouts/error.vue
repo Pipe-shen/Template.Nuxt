@@ -16,6 +16,6 @@ export default {
       }
     }
   },
-  layout: 'blog' // 你可以为错误页面指定自定义的布局
+  layout: 'default' // 你可以为错误页面指定自定义的布局
 }
 </script>
