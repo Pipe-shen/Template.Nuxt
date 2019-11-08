@@ -27,7 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/element-ui'],
+  plugins: ['@/plugins/element-ui', '~/plugins/axios'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -46,7 +46,21 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    host: 'ks-backend.cnsaas.com',
+    port: '80',
+    prefix: '/content/api',
+    // baseURL: http://[HOST]:[PORT][PREFIX],
+    // browserBaseURL
+    // https
+    // progress
+    // proxy
+    // retry
+    credentials: true
+    // debug
+    // proxyHeaders
+    // proxyHeadersIgnore
+  },
   /*
    ** Build configuration
    */
