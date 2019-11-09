@@ -7,6 +7,13 @@
     <img src="~/assets/img/image.png" />
     <div class="title">链接</div>
     <nuxt-link to="/list">列表</nuxt-link>
+    <div class="title">第三方组件，moment</div>
+    <div class="title" v-text="'$moment() : ' + $moment()"></div>
+    <div class="title">第三方组件，lodash</div>
+    <div
+      class="title"
+      v-text="'$_.indexOf([1, 2, 1, 2], 2) : ' + $_.indexOf([1, 2, 1, 2], 2)"
+    ></div>
   </div>
 </template>
 
