@@ -31,7 +31,8 @@ export default {
     '@/plugins/element-ui',
     '~/plugins/axios',
     '~/plugins/moment',
-    '~/plugins/lodash'
+    '~/plugins/lodash',
+    '~/plugins/config'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -75,5 +76,20 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+    /* postcss: {
+      plugins: {
+        'postcss-pxtorem': {
+          rootValue: 100,
+          propList: ['*']
+        }
+      },
+      preset: {
+        autoprefixer: { grid: true }
+      }
+    } */
+  },
+  server: {
+    port: 8080, // default: 3000
+    host: '0.0.0.0' // default: localhost
   }
 }

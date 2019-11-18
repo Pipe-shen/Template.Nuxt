@@ -4,7 +4,7 @@
     <div class="title">公用组件</div>
     <logo />
     <div class="title">静态资源</div>
-    <img src="~/assets/img/image.png" />
+    <img src="~/assets/img/image.png" class="thum" />
     <div class="title">链接</div>
     <nuxt-link to="/list">列表</nuxt-link>
     <div class="title">第三方组件，moment</div>
@@ -73,9 +73,13 @@ export default {
 <style lang="scss" scoped>
 // 样式
 .page {
+  width: 1000px;
   background-color: #efefef;
   .title {
     padding: 10px 0;
+  }
+  .thum {
+    width: 1920px;
   }
 }
 </style>
