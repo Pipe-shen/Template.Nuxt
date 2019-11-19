@@ -29,7 +29,8 @@ export default {
       name: 'index',
       title: '首页 - xxxxx 标题',
       description: '首页 - xxxxxxx 摘要',
-      fetchList: []
+      fetchList: [],
+      ip: ''
     }
   },
   computed: {
@@ -39,8 +40,8 @@ export default {
   },
   // SSR 最重要的一个键, 支持 异步数据处理，另外该方法的第一个参数为当前页面组件的 上下文对象。
   async asyncData({ $axios }) {
-    const ip = await $axios.$get('http://icanhazip.com')
-    return { project: 'nuxt', ip }
+    /* const ip = await $axios.$get('http://icanhazip.com')
+    return { project: 'nuxt', ip } */
   },
   head() {
     return {
@@ -73,13 +74,12 @@ export default {
 <style lang="scss" scoped>
 // 样式
 .page {
-  width: 1000px;
   background-color: #efefef;
   .title {
     padding: 10px 0;
   }
   .thum {
-    width: 1920px;
+    width: 190px;
   }
 }
 </style>
