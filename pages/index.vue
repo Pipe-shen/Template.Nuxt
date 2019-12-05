@@ -4,6 +4,14 @@
     <div class="title">公用组件</div>
     <logo />
     <div class="title">静态资源</div>
+    <div class="title">
+      带变量的：如果是 :src 的话，用require 和 @
+      来处理，:src="require('@/assets/img/image.png')"
+    </div>
+    <div v-for="(item, index) in 5" :key="index">
+      <img :src="require('@/assets/img/image.png')" class="thum" />
+    </div>
+    <div class="title">固定的</div>
     <img src="~/assets/img/image.png" class="thum" />
     <div class="title">链接</div>
     <nuxt-link to="/list">列表</nuxt-link>
